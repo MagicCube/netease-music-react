@@ -1,0 +1,36 @@
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  color: $text-color;
+  background-color: $body-bg;
+}
+
+.large {
+  font-size: $font-size-large;
+}
+
+small, .small {
+  font-size: $font-size-small;
+}
+
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+  line-height: 100%;
+}
+
+h1, .h1 {
+  font-size: $font-size-h1;
+}
+h2, .h2 {
+  font-size: $font-size-h2;
+}
+h3, .h3 {
+  font-size: $font-size-h3;
+}
