@@ -9,7 +9,7 @@ module.exports = {
     nm: './client/nm/index.jsx'
   },
   resolve: {
-    extensions: ['.js', 'jsx'],
+    extensions: ['.js', '.jsx'],
     alias: {
       'normalize.css$': path.resolve('./node_modules/normalize.css/normalize.css')
     }
