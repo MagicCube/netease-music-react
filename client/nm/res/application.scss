@@ -27,5 +27,6 @@
 
 .nm-app-footer {
   height: 64px;
+  flex-shrink: 0;
   border-top: $nm-border;
 }

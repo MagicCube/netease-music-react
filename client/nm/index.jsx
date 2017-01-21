@@ -4,7 +4,7 @@ import { browserHistory, IndexRoute, Route, Router } from 'react-router';
 import { Provider } from 'react-redux';
 
 import { loadPlaylists } from './action/playlist-action-creators';
-import Application from './component/Application';
+import Application from './container/Application';
 import configStore from './store';
 
 import './res/index.scss';
