@@ -1,0 +1,22 @@
+.nm-playlist-nav {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  ul {
+    li {
+      height: 30px;
+      line-height: 30px;
+      cursor: default;
+      padding-left: 30px;
+      padding-right: 10px;
+      a {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}

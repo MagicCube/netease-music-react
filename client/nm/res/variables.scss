@@ -5,12 +5,12 @@ $gray:                   lighten($gray-base, 33.5%);
 $gray-light:             lighten($gray-base, 46.7%);
 $gray-lighter:           lighten($gray-base, 93.5%);
 
-$body-bg:               #fff;
+$body-bg:               #fafafa;
 $text-color:            $gray-dark;
 
-@link-color:            @brand-primary;
-@link-hover-color:      darken($link-color, 15%);
-@link-hover-decoration: underline;
+$link-color:            $text-color;
+$link-hover-color:      darken($link-color, 15%);
+$link-hover-decoration: underline;
 
 $font-family-sans-serif:  -apple-system, BlinkMacSystemFont, "微软雅黑", "Microsoft Yahei", "MSYahei", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-base:        $font-family-sans-serif;
@@ -20,3 +20,15 @@ $font-size-small:         ceil(($font-size-base * 0.85));
 $font-size-h1:            floor(($font-size-base * 2.6));
 $font-size-h2:            floor(($font-size-base * 2.15));
 $font-size-h3:            ceil(($font-size-base * 1.7));
+
+
+
+
+$nm-red:                  #b71803;
+$nm-border:               1px solid #c5c5c5;
+
+$nm-header-text:          #fff;
+$nm-header-bg:            $nm-red;
+$nm-header-height:        50px;
+
+$nm-app-nav-bar-bg:       #f6f6f6;

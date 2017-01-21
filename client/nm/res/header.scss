@@ -1,0 +1,13 @@
+@import "variables";
+
+.nm-header {
+  height: $nm-header-height;
+  line-height: $nm-header-height;
+  color: $nm-header-text;
+  background: $nm-header-bg;
+  padding: 0 20px;
+
+  .nm-brand {
+    font-size: $font-size-h3;
+  }
+}

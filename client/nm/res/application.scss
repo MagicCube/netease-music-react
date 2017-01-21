@@ -1,0 +1,31 @@
+@import "variables";
+
+.nm-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.nm-app-body {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row;
+}
+
+.nm-app-nav-bar {
+  width: 18%;
+  max-width: 300px;
+  min-width: 200px;
+  border-right: $nm-border;
+  background: $nm-app-nav-bar-bg;
+}
+
+.nm-app-main {
+  flex-grow: 1;
+}
+
+.nm-app-footer {
+  height: 64px;
+  border-top: $nm-border;
+}

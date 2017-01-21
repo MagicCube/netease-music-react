@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "variables";
 
 * {
   box-sizing: border-box;
@@ -33,4 +33,15 @@ h2, .h2 {
 }
 h3, .h3 {
   font-size: $font-size-h3;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
 }
