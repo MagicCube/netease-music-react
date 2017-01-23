@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import Header from '../component/Header';
-import PlaylistNav from '../component/PlaylistNav';
+import PlaylistList from '../component/PlaylistList';
 
 import '../res/application.scss';
 
@@ -27,7 +27,7 @@ export default class Application extends Component {
       <Header />
       <div className="nm-app-body">
         <div className="nm-app-nav-bar">
-          <PlaylistNav playlists={this.props.playlists} />
+          <PlaylistList playlists={this.props.playlists} />
         </div>
         <main className="nm-app-main">
           {this.props.children}

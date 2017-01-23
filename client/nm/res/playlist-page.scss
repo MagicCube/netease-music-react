@@ -1,0 +1,29 @@
+@import 'variables';
+
+.nm-playlist-page {
+  padding: 30px;
+
+  .header {
+    display: flex;
+    margin-bottom: 30px;
+
+    .cover {
+      border: $nm-border;
+      width: 120px;
+      height: 120px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .info {
+      padding-left: 30px;
+
+      .title {
+        font-size: $font-size-base * 2;
+      }
+    }
+  }
+
+  .body {
+  }
+}

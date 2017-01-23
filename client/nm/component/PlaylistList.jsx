@@ -1,9 +1,9 @@
 import { Link } from 'react-router';
 import React, { PropTypes } from 'react';
 
-import '../res/playlist-nav.scss';
+import '../res/playlist.scss';
 
-export default function PlaylistNav(props, context) {
+export default function PlaylistList(props, context) {
   function renderItem(playlist) {
     const selected = (playlist.id === parseInt(context.router.params.playlistId, 0));
     return <li key={playlist.id} className={selected ? 'selected' : null}><Link to={`/playlist/${playlist.id}`}>{playlist.name}</Link></li>;
@@ -14,7 +14,7 @@ export default function PlaylistNav(props, context) {
   }
 
   return (
-    <div className="nm-playlist-nav">
+    <div className="nm-playlist">
       <ul>
         { renderItems() }
       </ul>
@@ -22,18 +22,18 @@ export default function PlaylistNav(props, context) {
   );
 }
 
-PlaylistNav.propTypes = {
+PlaylistList.propTypes = {
   playlists: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string
   }))
 };
 
-PlaylistNav.defaultProps = {
+PlaylistList.defaultProps = {
   playlists: []
 };
 
-PlaylistNav.contextTypes = {
+PlaylistList.contextTypes = {
   router: PropTypes.shape({
     params: PropTypes.shape({ playlistId: PropTypes.string })
   }).isRequired
