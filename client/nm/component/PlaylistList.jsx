@@ -5,7 +5,7 @@ import '../res/playlist.scss';
 
 export default function PlaylistList(props, context) {
   function renderItem(playlist) {
-    const selected = (playlist.id === parseInt(context.router.params.playlistId, 0));
+    const selected = (playlist.id === props.selectedPlaylistId);
     return <li key={playlist.id} className={selected ? 'selected' : null}><Link to={`/playlist/${playlist.id}`}>{playlist.name}</Link></li>;
   }
 
@@ -26,11 +26,13 @@ PlaylistList.propTypes = {
   playlists: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string
-  }))
+  })),
+  selectedPlaylistId: PropTypes.number
 };
 
 PlaylistList.defaultProps = {
-  playlists: []
+  playlists: [],
+  selectedPlaylistId: null
 };
 
 PlaylistList.contextTypes = {

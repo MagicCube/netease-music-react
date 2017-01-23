@@ -3,13 +3,22 @@
 .nm-track-table {
   width: 100%;
   border-top: 3px solid $nm-red;
+  table-layout: fixed;
 
   tr {
     height: 30px;
 
     td, th {
       padding-left: 15px;
-      padding-rigth: 15px;
+      padding-right: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &.index {
+        width: 60px;
+        text-align: right;
+      }
 
       &.artist {
         width: 10%;

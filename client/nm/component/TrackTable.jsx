@@ -5,8 +5,9 @@ import React, { PropTypes } from 'react';
 import '../res/track-table.scss';
 
 export default function TrackTable(props) {
-  function renderItem(track) {
+  function renderItem(track, index) {
     return (<tr id={track.id} key={track.id}>
+      <td className="index">{index + 1}</td>
       <td className="name">{track.name}</td>
       <td className="artist">{track.artists[0].name}</td>
       <td className="album">{track.album.name}</td>
@@ -15,17 +16,18 @@ export default function TrackTable(props) {
   }
 
   function renderItems() {
-    return props.tracks.map(track => renderItem(track));
+    return props.tracks.map((track, index) => renderItem(track, index));
   }
 
   return (
     <table className="nm-track-table">
       <thead>
         <tr>
-          <th>音乐标题</th>
-          <th>表演者</th>
-          <th>专辑</th>
-          <th>时长</th>
+          <th className="index" />
+          <th className="name">音乐标题</th>
+          <th className="artist">表演者</th>
+          <th className="album">专辑</th>
+          <th className="duration">时长</th>
         </tr>
       </thead>
       <tbody>

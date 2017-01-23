@@ -7,7 +7,7 @@ import PlaylistList from '../component/PlaylistList';
 import '../res/application.scss';
 
 @connect(
-  state => ({ playlists: state.playlists })
+  state => ({ playlists: state.playlists, selectedPlaylistId: state.currentPlaylist ? state.currentPlaylist.id : null })
 )
 export default class Application extends Component {
   static propTypes = {
@@ -27,7 +27,7 @@ export default class Application extends Component {
       <Header />
       <div className="nm-app-body">
         <div className="nm-app-nav-bar">
-          <PlaylistList playlists={this.props.playlists} />
+          <PlaylistList playlists={this.props.playlists} selectedPlaylistId={this.props.selectedPlaylistId} />
         </div>
         <main className="nm-app-main">
           {this.props.children}
