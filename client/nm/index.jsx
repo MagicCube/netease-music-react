@@ -4,7 +4,7 @@ import { browserHistory, Router } from 'react-router';
 import { Provider } from 'react-redux';
 
 import routes from './routes';
-import { loadPlaylists } from './action/playlist-action-creators';
+import { loadPlaylists } from './action/action-creators';
 
 import configStore from './store';
 
@@ -18,7 +18,7 @@ $(() => {
   render(
     <Provider store={store}>
       <Router history={browserHistory}>
-        {routes}
+        {routes(store)}
       </Router>
     </Provider>,
     document.getElementById('nm-root')

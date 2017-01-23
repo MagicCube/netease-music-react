@@ -1,10 +1,10 @@
 import { handleActions } from 'redux-actions';
-import { loadPlaylists } from '../action/action-creators';
+import { loadPlaylist } from '../action/action-creators';
 
 const reducer = handleActions({
-  [loadPlaylists](state, action) {
+  [loadPlaylist](state, action) {
     return action.payload;
   }
-}, []);
+}, {});
 
 export default reducer;

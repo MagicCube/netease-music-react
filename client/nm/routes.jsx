@@ -1,11 +1,19 @@
 import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 
-import Application from './container/Application';
-import HomePage from './page/HomePage';
-import PlaylistPage from './page/PlaylistPage';
+import { loadPlaylist } from './action/action-creators';
 
-export default <Route path="/" component={Application}>
-  <IndexRoute component={HomePage} />
-  <Route path="/playlist/:playlistId" component={PlaylistPage} />
-</Route>;
+import Application from './container/Application';
+import HomePage from './container/HomePage';
+import PlaylistPage from './container/PlaylistPage';
+
+function _playlistPage_onEnter(state, store) {
+  store.dispatch(loadPlaylist(state.params.playlistId));
+}
+
+export default function (store) {
+  return (<Route path="/" component={Application}>
+    <IndexRoute component={HomePage} />
+    <Route path="/playlist/:playlistId" component={PlaylistPage} onEnter={state => _playlistPage_onEnter(state, store)} />
+  </Route>);
+}

@@ -2,7 +2,7 @@ const NM_API_URL = 'http://music.163.com/api';
 
 export const userId = 40652589;
 
-export async function getUserPlayLists(uid = userId) {
+export async function getUserPlaylists(uid = userId) {
   let res = null;
   try {
     res = await $.ajax({
