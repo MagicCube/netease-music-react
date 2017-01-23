@@ -34,9 +34,3 @@ PlaylistList.defaultProps = {
   playlists: [],
   selectedPlaylistId: null
 };
-
-PlaylistList.contextTypes = {
-  router: PropTypes.shape({
-    params: PropTypes.shape({ playlistId: PropTypes.string })
-  }).isRequired
-};
