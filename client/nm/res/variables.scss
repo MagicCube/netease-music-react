@@ -1,14 +1,15 @@
 $gray-base:              #000;
 $gray-darker:            lighten($gray-base, 13.5%);
 $gray-dark:              lighten($gray-base, 25%);
-$gray:                   lighten($gray-base, 33.5%);
-$gray-light:             lighten($gray-base, 46.7%);
-$gray-lighter:           lighten($gray-base, 93.5%);
+$gray:                   lighten($gray-base, 33.3%);
+$gray-light:             lighten($gray-base, 45%);
+$gray-lighter:           lighten($gray-base, 90%);
 
 $body-bg:               #fafafa;
 $text-color:            $gray-dark;
 
-$link-color:            $text-color;
+$link-color:            blue;
+$link-decoration:       none;
 $link-hover-color:      darken($link-color, 15%);
 $link-hover-decoration: underline;
 

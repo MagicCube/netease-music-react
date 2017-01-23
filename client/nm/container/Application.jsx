@@ -11,6 +11,7 @@ import '../res/application.scss';
 )
 export default class Application extends Component {
   static propTypes = {
+    children: PropTypes.element.isRequired,
     playlists: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string
@@ -28,7 +29,9 @@ export default class Application extends Component {
         <div className="nm-app-nav-bar">
           <PlaylistNav playlists={this.props.playlists} />
         </div>
-        <main className="nm-app-main" />
+        <main className="nm-app-main">
+          {this.props.children}
+        </main>
       </div>
       <div className="nm-app-footer" />
     </div>);

@@ -23,3 +23,23 @@ export async function getUserPlayLists(uid = userId) {
     throw new Error(`Response with error code: ${res.code}`);
   }
 }
+
+export async function getPlaylist(id) {
+  let res = null;
+  try {
+    res = await $.ajax({
+      url: `${NM_API_URL}/playlist/detail`,
+      data: {
+        id
+      }
+    });
+  } catch (e) {
+    throw e;
+  }
+
+  if (res.code === 200) {
+    return res.result;
+  } else {
+    throw new Error(`Response with error code: ${res.code}`);
+  }
+}

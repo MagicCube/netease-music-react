@@ -33,6 +33,10 @@ module.exports = {
         fallbackLoader: 'style-loader',
         loader: ['css-loader', 'sass-loader']
       })
+    },
+    {
+      test: /\.md$/,
+      use: ['html-loader', 'markdown-loader']
     }]
   },
   plugins: [
@@ -47,5 +51,8 @@ module.exports = {
       filename: './js/vendor.min.js',
       minChunks: Infinity
     })
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true
+  }
 };

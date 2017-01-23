@@ -9,7 +9,6 @@
     li {
       height: 30px;
       line-height: 30px;
-      cursor: default;
       padding-left: 30px;
       padding-right: 10px;
       position: relative;
@@ -18,12 +17,22 @@
         width: 100%;
         display: block;
         overflow: hidden;
+        color: $text-color;
         text-overflow: ellipsis;
         white-space: nowrap;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &:hover {
+        background: lighten($gray-lighter, 95%);
       }
 
       &.selected {
-        background-color: #e3e3e3;
+        background-color: $gray-lighter;
 
         &:before {
           content: "";

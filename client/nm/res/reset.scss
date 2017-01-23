@@ -36,6 +36,20 @@ h3, .h3 {
 }
 
 
+a {
+  color: $link-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+
 ul {
   list-style: none;
   padding: 0;
