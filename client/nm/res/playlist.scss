@@ -32,7 +32,8 @@
       }
 
       &.selected {
-        background-color: $gray-lighter;
+        color: $selection-color;
+        background-color: $selection-bg;
 
         &:before {
           content: "";

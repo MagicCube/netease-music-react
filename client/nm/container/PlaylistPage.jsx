@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import TrackTable from '../component/TrackTable';
 
 import '../res/playlist-page.scss';
 
@@ -21,7 +22,9 @@ export default class PlaylistPage extends Component {
             <h1 className="title">{playlist.name}</h1>
           </div>
         </div>
-        <div className="body" />
+        <div className="body">
+          <TrackTable tracks={playlist.tracks} />
+        </div>
       </div>
     );
   }

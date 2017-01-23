@@ -15,6 +15,7 @@
 
 .nm-app-nav-bar {
   width: 18%;
+  flex-shrink: 0;
   max-width: 300px;
   min-width: 200px;
   border-right: $nm-border;

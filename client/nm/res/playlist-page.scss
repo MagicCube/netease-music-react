@@ -1,11 +1,12 @@
 @import 'variables';
 
 .nm-playlist-page {
-  padding: 30px;
+  height: 100%;
+  overflow-y: auto;
 
   .header {
     display: flex;
-    margin-bottom: 30px;
+    margin: 30px;
 
     .cover {
       border: $nm-border;
@@ -22,8 +23,5 @@
         font-size: $font-size-base * 2;
       }
     }
-  }
-
-  .body {
   }
 }

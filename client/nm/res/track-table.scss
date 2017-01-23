@@ -1,0 +1,55 @@
+@import 'variables';
+
+.nm-track-table {
+  width: 100%;
+  border-top: 3px solid $nm-red;
+
+  tr {
+    height: 30px;
+
+    td, th {
+      padding-left: 15px;
+      padding-rigth: 15px;
+
+      &.artist {
+        width: 10%;
+        min-width: 150px;
+      }
+
+      &.album {
+        width: 10%;
+        min-width: 250px;
+      }
+
+      &.duration {
+        width: 5%;
+        min-width: 100px;
+      }
+    }
+  }
+
+  thead {
+    th {
+      text-align: left;
+      border-right: $nm-border;
+      border-bottom: $nm-border;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  tbody {
+    tr{
+      &:nth-child(2n + 1) {
+        background-color: #f4f4f4;
+      }
+
+      &.selected {
+        color: $selection-color;
+        background-color: $selection-bg;
+      }
+    }
+  }
+}
